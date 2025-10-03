@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaswanth K — Data Engineer</title>
+  <meta name="description" content="Portfolio of Yaswanth K, Data Engineer specializing in AWS, GCP, Snowflake, Python, SQL, and PySpark." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d10; --card:#111418; --muted:#9aa4af; --text:#e8edf2; --brand:#6ea8fe; --brand-2:#9bdbff; --accent:#22c55e;
+      --ring: 0 0 0 3px rgba(110,168,254,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{font-family:'Inter',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b0d10,#0b0d10 40%,#0e1116);color:var(--text);line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;backdrop-filter:saturate(150%) blur(10px);background:rgba(11,13,16,.6);border-bottom:1px solid #1b2027;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav a{padding:10px 12px;border-radius:10px}
+    .nav a:hover{background:#151a22}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:12px;background:radial-gradient(120% 120% at 0% 0%,#1f2937 0,#0b0d10 60%);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35), inset 0 0 0 1px #1b2027}
+    .logo span{font-weight:800;letter-spacing:.5px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{border:1px solid #243042;background:#121720;color:var(--text);padding:10px 14px;border-radius:12px;font-weight:600;transition:transform .05s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--ring)}
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));border-color:transparent;color:#071019}
+    .btn.ghost{background:transparent}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:40px 0}
+    .hero-card{background:linear-gradient(180deg,#12161d,#0f1319);border:1px solid #1c222b;border-radius:20px;padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.28)}
+    h1{font-size:42px;line-height:1.15;margin:0 0 10px}
+    .subtitle{color:var(--muted);font-size:17px;margin-bottom:18px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .tag{font-size:12px;border:1px solid #243042;background:#11161f;padding:6px 10px;border-radius:999px;color:#cfe3ff}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .stat{background:#0f141b;border:1px solid #1b2027;padding:14px;border-radius:14px;text-align:center}
+    .stat .k{font-size:20px;font-weight:800}
+
+    section{padding:14px 0 24px}
+    .section-title{font-size:22px;margin:6px 0 14px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .card{background:linear-gradient(180deg,#10151b,#0e1218);border:1px solid #1a2027;border-radius:16px;padding:18px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:#bdc6d1}
+    .pill{display:inline-block;margin-top:10px;font-size:12px;border:1px solid #243042;padding:6px 10px;border-radius:999px;color:#b2c8ff}
+    .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .list{margin:0;padding-left:18px;color:#c9d3de}
+
+    .timeline{position:relative;padding-left:24px}
+    .timeline:before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:#1f2731}
+    .t-item{position:relative;margin:0 0 18px}
+    .t-item:before{content:"";position:absolute;left:-2px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(110,168,254,.18)}
+    .t-role{font-weight:700}
+    .t-meta{color:var(--muted);font-size:13px;margin-top:2px}
+    .t-body{margin-top:8px;color:#cfe3ff}
+
+    footer{border-top:1px solid #1b2027;margin-top:22px;padding:24px 0;color:var(--muted)}
+    .contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .contact-card{background:#0f141b;border:1px solid #1b2027;border-radius:14px;padding:14px}
+
+    @media (max-width: 950px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .contact-cards{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"><span>YK</span></div>
+        <strong>Yaswanth K</strong>
+      </div>
+      <nav class="cta">
+        <a class="btn ghost" href="#projects">Projects</a>
+        <a class="btn ghost" href="#skills">Skills</a>
+        <a class="btn ghost" href="#experience">Experience</a>
+        <a class="btn primary" href="Yaswanth_K__1_ (1).pdf" download>Download Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Data Engineer
+          <span style="display:block;font-size:.6em;color:var(--muted);font-weight:600">AWS • GCP • Snowflake • Python • SQL • PySpark</span>
+        </h1>
+        <p class="subtitle">I design and optimize large-scale ETL/ELT pipelines and real-time streaming solutions. I’ve delivered cloud migrations, inventory analytics, and performance tuning that cut query times by up to <strong>60%</strong> and infrastructure costs by <strong>35%</strong>.</p>
+        <div class="tags">
+          <span class="tag">Airflow</span>
+          <span class="tag">Kafka</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">Redshift</span>
+          <span class="tag">Snowflake</span>
+          <span class="tag">DBT</span>
+          <span class="tag">Terraform</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Contact Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/yaswanth-k-04a6731b9/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="mailto:yaswanthchowdary200@gmail.com">Email</a>
+        </div>
+        <div class="stats" style="margin-top:16px">
+          <div class="stat"><div class="k">4+ yrs</div><div class="s">Experience</div></div>
+          <div class="stat"><div class="k">50+</div><div class="s">Workloads migrated</div></div>
+          <div class="stat"><div class="k">87%</div><div class="s">Forecast accuracy</div></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2 class="section-title" style="margin-top:0">Certifications</h2>
+        <ul class="list">
+          <li>AWS Certified Data Engineer – Specialty (Apr 2023)</li>
+          <li>Google Cloud Professional Data Engineer (Aug 2022)</li>
+        </ul>
+        <h2 class="section-title">Education</h2>
+        <p><strong>MS, Computer Science</strong> — University of North Texas (May 2025)</p>
+        <h2 class="section-title">Contact</h2>
+        <div class="row">
+          <a class="pill" href="tel:+19452861919">+1 (945) 286-1919</a>
+          <a class="pill" href="mailto:yaswanthchowdary200@gmail.com">yaswanthchowdary200@gmail.com</a>
+          <a class="pill" href="https://www.linkedin.com/in/yaswanth-k-04a6731b9/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Real-Time Retail Demand Forecasting</h3>
+          <p>Built a real-time forecasting pipeline using <strong>PySpark</strong>, <strong>AWS Glue</strong>, <strong>Redshift</strong>, and <strong>Prophet</strong> to process 10M+ transactions and generate weekly sales forecasts, reducing overstock by <strong>30%</strong>.</p>
+          <span class="pill">Airflow • PySpark • Redshift • Prophet</span>
+        </article>
+        <article class="card">
+          <h3>Global Supply Chain Data Lakehouse</h3>
+          <p>Designed a retail lakehouse on <strong>AWS (S3, Glue, Athena)</strong> with <strong>Kafka</strong> ingestion and schema versioning. Optimized partitioning to reduce query latency by <strong>40%</strong>; delivered KPI dashboards in QuickSight.</p>
+          <span class="pill">S3 • Glue • Athena • Kafka</span>
+        </article>
+        <article class="card">
+          <h3>Customer Churn Prediction & APIs</h3>
+          <p>Developed an <strong>XGBoost</strong>-based churn model (87% accuracy), deployed via <strong>Flask</strong> + Docker with REST endpoints for real-time inference; visualized metrics in Power BI.</p>
+          <span class="pill">Python • XGBoost • Flask • Docker</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Languages & Core</h3>
+          <p>Python, SQL, Java, Scala, Linux</p>
+        </div>
+        <div class="card">
+          <h3>Big Data & Streaming</h3>
+          <p>Apache Spark/PySpark, Hadoop, Kafka, Hive, Azure Synapse</p>
+        </div>
+        <div class="card">
+          <h3>Cloud & Warehouses</h3>
+          <p>AWS (S3, Glue, Redshift, EC2, KMS), GCP (BigQuery, DataProc, Cloud Storage, Composer), Snowflake</p>
+        </div>
+        <div class="card">
+          <h3>Orchestration & ETL</h3>
+          <p>Airflow, dbt, Talend, Fivetran, Step Functions, Cloud Composer</p>
+        </div>
+        <div class="card">
+          <h3>Databases</h3>
+          <p>Redshift, PostgreSQL, MySQL, Oracle, MongoDB, Cassandra, DynamoDB</p>
+        </div>
+        <div class="card">
+          <h3>DevOps & Security</h3>
+          <p>Git, GitHub Actions, GitLab, Docker, Kubernetes, Terraform, CloudFormation, IAM, KMS, DLP, Masking, PCI-DSS</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-role">Data Engineer — Nike</div>
+          <div class="t-meta">Irving, TX · Jan 2024 – Present</div>
+          <div class="t-body">
+            <ul class="list">
+              <li>Designed batch + real-time pipelines across AWS (S3, Glue, Redshift) and GCP BigQuery for global sales & supply chain.</li>
+              <li>Built dimensional models/star schemas enabling unified analytics; reduced query time by 45%.</li>
+              <li>Integrated multi-source feeds (POS, e‑commerce, supplier APIs) via PySpark + Airflow to improve freshness/reliability.</li>
+              <li>Automated data quality with Great Expectations, cutting production issues by 30%.</li>
+              <li>Partnered with analytics teams to deliver Power BI/QuickSight dashboards for demand & engagement.</li>
+              <li>Implemented IAM/KMS encryption & masking to protect PII and meet security standards.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-role">Data Engineer — DHL</div>
+          <div class="t-meta">Chennai, IN · Feb 2021 – Jun 2023</div>
+          <div class="t-body">
+            <ul class="list">
+              <li>Migrated 20+ high‑volume SQL Server workloads to Redshift via S3 staging; reduced latency by 40%.</li>
+              <li>Built Airflow DAGs for batch + streaming ETL; improved accuracy by 30%.</li>
+              <li>Integrated 7+ sources using Python (Pandas, Boto3) and automated data quality with Great Expectations (‑35% issues).</li>
+              <li>Provisioned infra with CloudFormation; CI/CD via GitHub Actions (‑50% deploy time).</li>
+              <li>Enabled PCI‑DSS audit readiness with encryption‑at‑rest and granular access logging.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Get in touch</h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <strong>Email</strong>
+          <div><a href="mailto:yaswanthchowdary@gmail.com">yaswanthchowdary@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <strong>LinkedIn</strong>
+          <div><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yaswanth-k-04a6731b9/">linkedin.com/in/yaswanth-k-04a6731b9</a></div>
+        </div>
+        <div class="contact-card">
+          <strong>Phone</strong>
+          <div><a href="tel:+19452861919">+1 (945) 286-1919</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row" style="justify-content:space-between">
+        <div>© <span id="year"></span> Yaswanth K — Data Engineer</div>
+        <div>Built with HTML & CSS. Hosted on <a href="https://pages.github.com/" target="_blank" rel="noreferrer">GitHub Pages</a>.</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- JSON-LD for rich search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yaswanth K",
+    "jobTitle": "Data Engineer",
+    "email": "mailto:yaswanthchowdary@gmail.com",
+    "telephone": "+1-945-286-1919",
+    "url": "https://your-username.github.io/portfolio/",
+    "sameAs": [
+      "https://www.linkedin.com/in/yaswanth-k-04a6731b9/"
+    ],
+    "knowsAbout": ["Data Engineering","AWS","GCP","Snowflake","Python","SQL","PySpark","Airflow","Kafka","BigQuery","Redshift"]
+  }
+  </script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
